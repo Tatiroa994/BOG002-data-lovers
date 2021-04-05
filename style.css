@@ -1,0 +1,477 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*mantener el  footer abajo*/
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #121830;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  text-align: center;
+  color: #d2da4b;
+  font-size: 1.5em;
+  font-family: "Indie Flower", cursive;
+  flex-shrink: 0;
+}
+
+/*Barra de navegacion*/
+nav {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  position: relative;
+  background-color: #1c1b43;
+}
+
+.list-menu {
+  margin: 0;
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #1c1b43;
+  color: #f3e4e4;
+  font-family: "Indie Flower", cursive;
+  cursor: pointer;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-out;
+}
+
+#menu-icon {
+  background-color: #1c1b43;
+  color: white;
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+.menuItem {
+  font-size: 2rem;
+}
+
+.menuItem:hover {
+  background-color: rgb(255, 250, 250);
+  color: #666666;
+  border-radius: 10px;
+}
+
+.toggle {
+  transform: translateX(0);
+}
+
+/*tarjetas personajes*/
+.name-card {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.image-card {
+  width: 100%;
+}
+
+.card {
+  font-family: "Ravi Prakash", cursive;
+  background-color: #16acc9;
+  border: solid 0.3em #d2da4b;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.card:hover {
+  filter: drop-shadow(0 0 0.95rem #16acc9);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  width: 80%;
+  margin: 2rem auto;
+  grid-gap: 1rem;
+}
+
+.hidden-card {
+  visibility: hidden;
+  opacity: 0;
+  order: 1;
+}
+
+.hidden-section {
+  display: none;
+}
+
+/*filtros*/
+.filter-character {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  list-style-type: none;
+  color: #f3e4e4;
+  cursor: pointer;
+  text-align: center;
+  font-family: "Ravi Prakash", cursive;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.filter-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  border-bottom: solid 1px white;
+}
+
+.btn-filter {
+  border: solid 1px white;
+  border-radius: 4px;
+  padding: 0 0.5rem;
+  margin: 0 0.3rem 0.5rem 0;
+  cursor: pointer;
+  font-family: "Indie Flower", cursive;
+  color: #d2da4b;
+  font-size: 1.4rem;
+}
+
+.btn-filter.active {
+  background-color: #d2da4b;
+  color: #333;
+  border: solid #333 1px;
+}
+
+.btn-filter.inactive {
+  background-color: gray;
+  opacity: 0.4;
+  color: white;
+}
+
+.category {
+  width: 85%;
+}
+
+/*paginacion*/
+.pagenumbers {
+  width: 80%;
+  margin: 4rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pagenumbers button {
+  background-color: #16acc9;
+  font-family: "Ravi Prakash", cursive;
+  font-size: 1.5rem;
+  width: 3rem;
+  height: 2.5rem;
+  margin: 0 0.4rem 0.5rem 0;
+}
+
+.pagenumbers button.active {
+  background-color: #d2da4b;
+}
+
+/*barra de  busqueda*/
+.container-bar-sort {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.container-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar {
+  width: 80%;
+  height: 2.5rem;
+  border-radius: 25px;
+  font-size: 1.5rem;
+  font-family: "Ravi Prakash", cursive;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.container-sort {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.btn-delete {
+  /*boton personajes*/
+  height: 2.7rem;
+  width: 8rem;
+  font-size: 1.5rem;
+  font-family: "Ravi Prakash", cursive;
+  background-color: transparent;
+  border-radius: 8px;
+  color: #16acc9;
+  border: white solid 1px;
+  text-align: center;
+  padding-top: 0.2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.filter-btn {
+  /*boton az*/
+  border-radius: 3px;
+  border: white solid 1px;
+  cursor: pointer;
+  width: 2.2rem;
+  height: 100%;
+  margin-right: 0.5rem;
+  background-color: tr;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+/*modal*/
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  pointer-events: none;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  padding: 1rem;
+  transition: opacity 0.3s ease;
+  overflow-y: auto;
+}
+
+.showModal {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal {
+  position: relative;
+  background-color: #d2da4b;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
+  padding: 1.5rem 0 1.5rem 2rem;
+}
+
+.containerCharacter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #16acc9;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  width: 90%;
+}
+
+.botonModal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.5rem;
+  width: 8%;
+}
+
+.character-list {
+  list-style-type: none;
+  font-family: "Indie Flower", cursive;
+  font-size: 1rem;
+  width: 100%;
+  padding: 1.3rem;
+}
+
+.character-img {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/*responsive*/
+@media screen and (min-width: 640px) {
+  .wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /*modal*/
+  .modal-container {
+    padding: 0;
+  }
+  .modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal {
+    width: 89%;
+    height: 86%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .containerCharacter {
+    flex-direction: row;
+    border-radius: 10px;
+    height: 88%;
+    width: 89%;
+  }
+
+  .character-img {
+    height: 100%;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+  }
+
+  .botonModal {
+    width: 6%;
+  }
+
+  .container-bar-sort {
+    flex-direction: row;
+  }
+  .container-bar {
+    width: 50%;
+  }
+
+  .container-sort {
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  /*barra de navegacion*/
+  .containder-bar {
+    justify-content: flex-end;
+    margin: 1rem 0;
+  }
+
+  .search-bar {
+    width: 65%;
+    height: 2.5rem;
+    border-radius: 25px;
+    font-size: 1.5rem;
+  }
+
+  .btn-delete {
+    margin: 1rem;
+  }
+
+  .list-menu {
+    transform: translateX(0);
+    position: relative;
+    flex-direction: row;
+    top: 0;
+    justify-content: space-around;
+  }
+
+  .menuItem {
+    margin: 0 1rem;
+    font-size: 2rem;
+  }
+
+  .menuItem:hover {
+    text-decoration: underline;
+    background-color: transparent;
+    color: white;
+    border-radius: 0;
+  }
+
+  #menu-icon {
+    display: none;
+  }
+
+  .wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /*modal*/
+  .modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal {
+    width: 50%;
+    height: 64%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .containerCharacter {
+    flex-direction: row;
+    border-radius: 10px;
+  }
+
+  .character-img {
+    height: 100%;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+  }
+
+  .character-list {
+    font-size: 1.3rem;
+  }
+
+  .container-bar-sort {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .container-bar {
+    width: 50%;
+    justify-content: flex-end;
+  }
+  .container-sort {
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .filter-btn {
+    width: 3rem;
+    height: auto;
+  }
+  /* .filter-character {
+    flex-direction: row;
+    align-items: flex-start;
+  } */
+  /* .filter-list {
+    border-bottom: transparent solid 1px;
+  } */
+
+  .category{
+    width: 80%;
+  }
+}
