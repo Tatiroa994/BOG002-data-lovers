@@ -97,12 +97,12 @@ sectionCharacter.addEventListener("click", (event) => {
     setPagination(filterData, paginationElement, numberCard);
     displayList(filterData, listElement, numberCard, currentPage);
     orderData(filterData);
-    statusBottom();
+    statusButton();
   }
 });
 
 //pintar los botones del filtro
-function statusBottom() {
+function statusButton() {
   const othersButtons = document.querySelectorAll(".btn-filter");
   othersButtons.forEach((element) => {
     const idByElement = element.dataset.id;
