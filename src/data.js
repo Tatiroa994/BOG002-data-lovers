@@ -20,13 +20,13 @@ export const getCharacter = (idCard) => {
           url: data.results[i].image,
         },
         info: {
-          Nombre: data.results[i].name,
-          Estado: data.results[i].status,
-          Especie: data.results[i].species,
-          Genero: data.results[i].gender,
-          Origen: data.results[i]["origin"].name,
-          Locación: data.results[i]["location"].name,
-          "Episodios de aparición": data.results[i]["episode"].length,
+          Name: data.results[i].name,
+          Status: data.results[i].status,
+          Specie: data.results[i].species,
+          Gender: data.results[i].gender,
+          Origin: data.results[i]["origin"].name,
+          Location: data.results[i]["location"].name,
+          "Appearance episodes": data.results[i]["episode"].length,
         },
       };
     }

@@ -1,7 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Ravi+Prakash&display=swap");
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /*mantener el  footer abajo*/
@@ -11,6 +10,7 @@ body {
 }
 
 body {
+  margin: 0;
   background-color: #121830;
   display: flex;
   flex-direction: column;
