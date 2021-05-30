@@ -1,73 +1,69 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Ravi+Prakash&display=swap");
-    </style>
-  </head>
-  <body>
-    <header>
-      <picture>
-        <source srcset="img/header_mobile.jpg" media="(max-width: 1280px)" />
-        <source srcset="img/header_desktop.jpg" />
-        <img src="img/header_desktop.jpg" style="width: 100%; display: block" />
-      </picture>
-    </header>
-    <nav class="menu">
-      <ul id="list-menu" class="list-menu">
-        <li class="menuItem">Inicio</li>
-        <li class="menuItem" id="btn-character">Personajes</li>
-        <li class="menuItem">Episodios</li>
-        <li class="menuItem">Ubicaciones</li>
-      </ul>
-      <span><i class="material-icons" id="menu-icon">menu</i></span>
-    </nav>
-    <main>
-      <section id="section-character" class="hidden-section">
-        <div class="container-bar-sort">
-          <div id="search-bar" class="container-bar"></div>
-          <div class="container-sort">
-            <div id="list-order"></div>
-            <button id="btn-delete" class="btn-delete">PERSONAJES</button>
-          </div>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+</head>
+
+<body>
+  <header>
+    <picture>
+      <source srcset="img/header_mobile.jpg" media="(max-width: 1280px)" />
+      <source srcset="img/header_desktop.jpg" />
+      <img src="img/header_desktop.jpg" style="width: 100%; display: block; max-height: 250px;" />
+    </picture>
+  </header>
+  <nav class="menu">
+    <ul id="list-menu" class="list-menu">
+      <li class="menuItem"id="btn-home">Home</li>
+      <li class="menuItem" id="btn-character">Character</li>
+      <li class="menuItem" id="btn-episodes">Episodes info</li>
+      <li class="menuItem" id="btn-locations">locations</li>
+    </ul>
+    <span><i class="material-icons" id="menu-icon">menu</i></span>
+  </nav>
+  <main>
+    <section id="section-home"></section>
+    <section id="section-episodes"></section>
+    <section id="section-locations"></section>
+    <section id="section-character" class="hidden-section">
+      <div class="container-bar-sort">
+        <div id="search-bar" class="container-bar"></div>
+        <div class="container-sort">
+          <div id="list-order"></div>
+          <button id="btn-delete" class="btn-delete">FILTER RESET</button>
         </div>
+      </div>
+      <div class="container-filter-wrapper">
         <ul class="filter-character">
-          <li id="filter-status" class="category">
-            ESTADO
-            <ul id="list-status" class="filter-list"></ul>
+          <li id="filter-status" class="category">STATUS »
+            <div id="list-status" class="filter-list"></div>
           </li>
-          <li id="filter-gender" class="category">
-            GENERO
-            <ul id="list-gender" class="filter-list"></ul>
+          <li id="filter-specie" class="category">SPECIE »
+            <div id="list-specie" class="filter-list"></div>
           </li>
-          <li id="filter-specie" class="category">
-            ESPECIE
-            <ul id="list-specie" class="filter-list"></ul>
+          <li id="filter-gender" class="category">GENDER »
+            <div id="list-gender" class="filter-list"></div>
           </li>
         </ul>
-        <div id="root" class="wrapper"></div>
-        <div class="pagenumbers" id="pagination"></div>
-      </section>
-      <section>
-        <!--MODAL DE TARJETA POR PERSONAJES-->
-        <div id="modal_container" class="modal-container">
-          <div class="modal" id="modal"></div>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <hr />
-      @Copyrigt.All rights reserved.
-    </footer>
-    <script src="main.js" type="module"></script>
-  </body>
+        <div id="list-card" class="wrapper"></div>
+      </div>
+      <div class="pagenumbers" id="pagination"></div>
+    </section>
+    <!--MODAL DE TARJETA POR PERSONAJES-->
+    <div id="modal_container" class="modal-container">
+      <div class="modal" id="modal"></div>
+    </div>
+  </main>
+  <footer>
+    @Copyrigt.All rights reserved.
+  </footer>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>

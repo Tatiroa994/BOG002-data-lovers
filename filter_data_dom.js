@@ -4,14 +4,15 @@ const listStatus = document.getElementById("list-status");
 const listGender = document.getElementById("list-gender");
 const listSpecie = document.getElementById("list-specie");
 
+
 //pintar filtros
-export function drawList(results, listFilter) {
+export function drawList(dataFilter, listFilter) {
   if (!listFilter.innerHTML) {
-    results.list.forEach((element) => {
-      let btnCategory = document.createElement("li");
+    dataFilter.list.forEach((element) => {
+      let btnCategory = document.createElement("div");
       btnCategory.textContent = element;
       btnCategory.classList.add("btn-filter");
-      btnCategory.dataset.id = results.id;
+      btnCategory.dataset.id = dataFilter.id;
       btnCategory.dataset.value = element;
       listFilter.appendChild(btnCategory);
     });
@@ -42,3 +43,5 @@ export function getListFilters(categorySelected) {
   }
   return dataFilter, categorySelected;
 }
+
+
