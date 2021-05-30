@@ -4,11 +4,12 @@ const listStatus = document.getElementById("list-status");
 const listGender = document.getElementById("list-gender");
 const listSpecie = document.getElementById("list-specie");
 
+
 //pintar filtros
 export function drawList(dataFilter, listFilter) {
   if (!listFilter.innerHTML) {
     dataFilter.list.forEach((element) => {
-      let btnCategory = document.createElement("li");
+      let btnCategory = document.createElement("div");
       btnCategory.textContent = element;
       btnCategory.classList.add("btn-filter");
       btnCategory.dataset.id = dataFilter.id;
@@ -42,3 +43,5 @@ export function getListFilters(categorySelected) {
   }
   return dataFilter, categorySelected;
 }
+
+
